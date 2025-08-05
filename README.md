@@ -1,10 +1,8 @@
-# 🇮🇳 Swarajya: AI-Powered Government Portal Translator
+#  Swaraj: AI-Powered Government Portal Translator
+ Bridging Bharat with Bharosa: Making Government Information Truly Accessible."
 
-### 🧠 Tagline: *"Bridging Bharat with Bharosa: Making Government Information Truly Accessible."*
 
----
-
-## 📌 Overview
+## Overview
 
 **Swarajya** is a cloud-native web application designed to make Indian government websites more inclusive and accessible. Despite Hindi and English being official languages, a vast population relies on regional languages and struggles with formal English used in official portals.
 
@@ -12,7 +10,7 @@ Swarajya addresses this language barrier by scraping content from government sit
 
 ---
 
-## 🎯 Purpose
+##  Purpose
 
 - To break down complex government English into understandable regional languages.
 - To ensure that every citizen, regardless of literacy or language, can access critical schemes, policies, and rights.
@@ -20,8 +18,7 @@ Swarajya addresses this language barrier by scraping content from government sit
 
 ---
 
-## ✨ Key Features
-
+## Key Features
 - 🔎 **Automated Web Scraping** of government website content
 - 🌐 **Multi-language Translation** (English ↔ Hindi, Urdu, Telugu, etc.)
 - 🗣️ **Text-to-Speech (TTS)** and **Speech-to-Text (STT)** for inclusive voice access
@@ -30,8 +27,7 @@ Swarajya addresses this language barrier by scraping content from government sit
 - 🖥️ **Minimal UI** for smooth user experience (via Streamlit)
 
 ---
-
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend:** Python (NLP, Translation, TTS/STT)
 - **Frontend:** Streamlit
@@ -41,7 +37,6 @@ Swarajya addresses this language barrier by scraping content from government sit
 - **Deployment:** Local + (Future: Streamlit Cloud / Railway)
 
 ---
-
 ## 👥 Team Roles
 
 - 👨‍💻 **Sai Mohan & Uday** – Web Scraping Engineers  
@@ -58,9 +53,7 @@ Swarajya addresses this language barrier by scraping content from government sit
 
 ---
 
-## 🚀 How to Run the Project Locally
-
-```bash
+##  How to Run the Project Locally
 # Clone the repository
 git clone https://github.com/your-org/swarajya.git
 cd swarajya
@@ -70,3 +63,29 @@ pip install -r requirements.txt
 
 # Run the Streamlit app
 streamlit run app.py
+---
+## 🚀 Installation
+To set up and run the project locally, follow these steps:
+### 1. 📦 Prerequisites
+Ensure you have Python 3.10+ installed. You can download it from [python.org](https://www.python.org/downloads/).
+
+### 2. 📁 Clone the Repository
+
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+### 4. 📥 Install Required Dependencies
+pip install -r requirements.txt
+```
+> If you don't have a `requirements.txt` file yet, create one with the required packages like:
+```
+streamlit
+googletrans==4.0.0rc1
+gTTS
+speechrecognition
+```
+You can generate it using:
+pip freeze > requirements.txt
+```
+
+
