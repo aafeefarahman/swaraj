@@ -1,97 +1,72 @@
-# swaraj
-Swaraj is a cloud-native web app empowering every Indian citizen with equal access to digital governance. It auto-translates government portals into 22 scheduled languages, enables real-time TTS/SST in local accents, and delivers a seamless, intuitive multilingual experience for all—no prior training needed.
+# 🇮🇳 Swarajya: AI-Powered Government Portal Translator
 
-**🎯 Day 1 Task**
-*Front end dev* 
-✅ Finalize basic UI structure in Streamlit (textbox, dropdowns, buttons)
-✅ Setup folder structure
-✅ Add dummy URL input + translate button (connect later)
-✅ Help unblock anyone stuck
+### 🧠 Tagline: *"Bridging Bharat with Bharosa: Making Government Information Truly Accessible."*
 
- *2.Translation & TTS/STT*
-explore tts, stt apis .
+---
 
-*3 Corpus & Dataset Manager* 	
-✅ Create a folder data
-✅ Add a .csv file structure like src_lang, tgt_lang, source_text, translated_text
-✅ Learn how to append translation data to it from UI.
+## 📌 Overview
 
- 4.*Web Scraping Engineer* 
-✅ Build working scraper.py that accepts a gov URL and returns clean paragraph text<b✅ Test on 2-3 real gov.in pages
-✅ Handle invalid URLs gracefully
+**Swarajya** is a cloud-native web application designed to make Indian government websites more inclusive and accessible. Despite Hindi and English being official languages, a vast population relies on regional languages and struggles with formal English used in official portals.
 
- *5.Docs & DevOps* 
-✅ Write initial README.md: project intro + team roles
-✅ List tech stack
-✅ Create GitLab wiki page  to track daily progress
-✅ Try running the project locally and note any setup issues
+Swarajya addresses this language barrier by scraping content from government sites, translating it into user-friendly regional languages, and providing optional voice-based accessibility.
 
+---
 
-📅 **Day 2 Taskboard – Swarajya: AI-Powered Government Portal Translator**
-coordinator + Frontened Developer + TTS/Translation
-[x] Push base code to GitHub (already done)
-[ ] Build basic Streamlit UI:
-Input field for URL
-**Language selection dropdowns (Source, Target)
-"Translate" button (initially non-functional)
-[ ] Add dummy TTS (Text-to-Speech) using pyttsx3 or placeholder audio
-[ ] Review each member's setup individually
+## 🎯 Purpose
 
-📖  *(Corpus & Dataset Manager)* 
-[ ] Create structure to store translation pairs
-Format: { "en": "Hello", "te": "హలో" }
-[ ] Store at least 3 hardcoded translation examples in data/corpus.csv
-[ ] Pick 2–3 government websites to use as sample inputs
+- To break down complex government English into understandable regional languages.
+- To ensure that every citizen, regardless of literacy or language, can access critical schemes, policies, and rights.
+- To assist marginalized communities with simplified and translated information delivery.
 
-📑  ( *Documentation & DevOps)* 
-[ ] Update README.md with:
-✅ Project title
-✅ Vision & Description
-✅ Team member roles
-✅ Tech stack (table)
-[ ] Create docs/setup.md with:
-[ ]Instructions to install
-VS Code, Python 3.11+, uv, and packages
-Screenshot examples
-[ ]Write notes on sprint meeting while user reporting there work 
-[name ,Task ,✅finished ,❌Pending ]
-[ ] Make sure project folder follows:
-/swarajya
- ->app.py
-  ->translator.py
- ->tts.py
- ->data
-    => corpus.csv
-  ->docs/
-     => setup.md
- ->README.md
+---
 
-📅 **Day 3 Taskboard – Swarajya: AI-Powered Government Portal Translator**
+## ✨ Key Features
 
-🧑‍💻 Sai Mohan / Uday – Web Scraping Engineer
-Task:
-Refactor the scraping script:
-Clean unwanted tags (ads, footers, headers).
-Extract only readable content (paragraphs, headings).
-Save final scraped results into JSON format:
-{
-  "url": "https://...",
-  "title": "Page Title",
-  "content": "Clean paragraph content here"
-}
+- 🔎 **Automated Web Scraping** of government website content
+- 🌐 **Multi-language Translation** (English ↔ Hindi, Urdu, Telugu, etc.)
+- 🗣️ **Text-to-Speech (TTS)** and **Speech-to-Text (STT)** for inclusive voice access
+- 🧠 **Content Type Classifier** (e.g., blog, news, about, survey)
+- ✨ **Summarization & Grammar Checking** for clarity
+- 🖥️ **Minimal UI** for smooth user experience (via Streamlit)
 
-📊 Bindu / Deepthi – Corpus & Dataset Manager
-Task:
-Take the JSON files from scraping and manually verify quality.
-Add new columns for manual translations in Telugu & Hindi for at least 10 entries.
-Create dataset_v1.csv in the /data folder:
-title | english | telugu | hindi
+---
 
-📝 Afeefa – Documentation & DevOps
-Task:
-Document the data pipeline:
-Where scraping outputs go.
-Where translations are stored.
-Add it to a new markdown file: docs/data_flow.md
-Also, explore and test how to deploy the current Streamlit app locally on another laptop.
- 
+## 🛠️ Tech Stack
+
+- **Backend:** Python (NLP, Translation, TTS/STT)
+- **Frontend:** Streamlit
+- **Libraries:** 
+  - `transformers`, `langdetect`, `nltk`, `gTTS`, `SpeechRecognition`
+  - `BeautifulSoup`, `requests`, `pandas`, `matplotlib`
+- **Deployment:** Local + (Future: Streamlit Cloud / Railway)
+
+---
+
+## 👥 Team Roles
+
+- 👨‍💻 **Sai Mohan & Uday** – Web Scraping Engineers  
+  > Building scraping scripts and sourcing data from official government portals.
+
+- 💡 **Shyam Cheni** – Translation, TTS/STT, Frontend Developer, Coordinator  
+  > Leads the app integration, voice module, and UI design.
+
+- 📊 **Deepthi & Bindu** – Corpus & Dataset Managers  
+  > Curate multilingual datasets for training/testing translation models.
+
+- 📝 **Afeefa** – Documentation & DevOps  
+  > Maintains project structure, writes docs, and handles local deployment testing.
+
+---
+
+## 🚀 How to Run the Project Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/your-org/swarajya.git
+cd swarajya
+
+# Install requirements
+pip install -r requirements.txt
+
+# Run the Streamlit app
+streamlit run app.py
