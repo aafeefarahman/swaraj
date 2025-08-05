@@ -27,7 +27,7 @@ explore tts, stt apis .
 
 
 📅 *Day 2 Taskboard – Swarajya: AI-Powered Government Portal Translator*  
- *Coordinator + Frontend Developer + TTS/Translation* 
+** *Coordinator + Frontend Developer + TTS/Translation* **
 [x] Push base code to GitHub (already done)
 [ ] Build basic Streamlit UI:
 Input field for URL
