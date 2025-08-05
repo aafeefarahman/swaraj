@@ -60,13 +60,14 @@ Screenshot examples
  ->app.py
   ->translator.py
  ->tts.py
- ->data/
-  └── corpus.csv
+ ->data
+    => corpus.csv
   ->docs/
-   └── setup.md
+     => setup.md
  ->README.md
 
 📅 **Day 3 Taskboard – Swarajya: AI-Powered Government Portal Translator**
+
 🧑‍💻 Sai Mohan / Uday – Web Scraping Engineer
 Task:
 Refactor the scraping script:
