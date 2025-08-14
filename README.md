@@ -67,8 +67,8 @@ Swaraj is built using modern tools for **reliability, speed, and scalability**:
 | ---------------- | ------------------------------------------- | -------------------------------------------------------------------- |
 | Sai Mohan & Uday | Web Scraping Engineers                      | Build scraping scripts and source data from government portals       |
 | Shyam Cheni      | Translation, TTS/STT, Frontend, Coordinator | Leads app integration, voice module, and UI design                   |
-| Deepthi & Bindu  | Corpus & Dataset Managers                   | Curate multilingual datasets for training/testing translation models |
-| Afefa            | Documentation & DevOps                      | Maintains project structure, writes docs, deployment testing         |
+| Deepthi          | Corpus & Dataset Managers                   | Curate multilingual datasets for training/testing translation models |
+| Afeefa            | Documentation & DevOps                      | Maintains project structure, writes docs, deployment testing         |
 
 ---
 
