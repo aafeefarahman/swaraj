@@ -111,6 +111,7 @@ streamlit run app.py
 
 ## **7. Data Pipeline Documentation**
 <img width="409" height="1501" alt="image" src="https://github.com/user-attachments/assets/fcd7abad-6b6a-410d-89d1-af6d455f3132" />
+
 Swaraj’s data flow is designed for **clarity, reusability, and robustness**:
 
 1. **User Input:** Paste government portal URL in Streamlit.
