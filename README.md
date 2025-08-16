@@ -127,6 +127,7 @@ streamlit run app.py
 ---
 
 ## **7. Project Workflow (Data Pipeline)**
+<img width="409" height="1600" alt="image" src="https://github.com/user-attachments/assets/1d460b2f-10bd-4a24-9144-09ec9276406b" />
 
 1. **User Input:** Paste government portal URL.
 2. **Web Scraping:** Scraper extracts meaningful content (paragraphs, headings) and removes unwanted tags.
