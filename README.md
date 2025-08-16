@@ -196,19 +196,6 @@ During Sprint 1-2, several **improvements were made**:
 
 ---
 
-### **Streamlit Cloud Deployment**
-
-1. Push code to GitHub repository:
-
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
-2. Login to [Streamlit Cloud](https://share.streamlit.io/) and connect the repo.
-3. Configure Python 3.11 environment and `requirements.txt`.
-4. Deploy and access via public URL.
-
 ---
 
 ## **10. Challenges Faced**
