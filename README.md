@@ -110,8 +110,7 @@ streamlit run app.py
 ---
 
 ## **7. Data Pipeline Documentation**
-<img width="409" height="1501" alt="image" src="https://github.com/user-attachments/assets/fcd7abad-6b6a-410d-89d1-af6d455f3132" />
-
+<img width="910" height="1368" alt="image" src="https://github.com/user-attachments/assets/b35f89bf-2d23-4208-b40b-be627f4bb904" />
 Swaraj’s data flow is designed for **clarity, reusability, and robustness**:
 
 1. **User Input:** Paste government portal URL in Streamlit.
@@ -221,17 +220,184 @@ During Sprint 1-2, several **improvements were made**:
 * Installing streamlit & learning it.
 
 ---
+---
 
-## **11. Future Work**
+## 11.🚀 Streamlit Deployment Steps
 
-* Add **chatbot** summarization for pages.
-* Extend **language support** beyond Hindi, Urdu, Telugu.
-* Enhance **grammar correction** and **AI summarization**.
-* Public cloud hosting with persistent database for citizens.
+**1. Install Dependencies**
+
+* Make sure Python (≥3.9) is installed.
+* Install project requirements:
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+**2. Set Up Virtual Environment** *(Optional but recommended)*
+
+* Create environment:
+
+  ```bash
+  python -m venv venv
+  ```
+* Activate it:
+
+  * Windows: `venv\Scripts\activate`
+  * Linux/Mac: `source venv/bin/activate`
+
+**3. Organize Project Files**
+
+* Keep files in a structured format:
+
+  ```
+  /swaraj
+    ├── app.py              # Main Streamlit app
+    ├── scraper/            # Scraping scripts
+    ├── translation/        # Translation pipeline
+    ├── data/               # Datasets or cache
+    ├── requirements.txt    # Dependencies
+    └── README.md
+  ```
+
+**4. Run Locally**
+
+* Launch app with:
+
+  ```bash
+  streamlit run app.py
+  ```
+* Open browser at `http://localhost:8501`.
+
+**5. Test Functionality**
+
+* Verify scraping → translation → display works.
+* Check UI, buttons, and language output.
+
+**6. Configure GitHub Repository**
+
+* Push code to GitHub repo for deployment.
+* Include `.gitignore` to skip cache & venv.
+
+**7. Setup Streamlit Cloud Account**
+
+* Sign in at [streamlit.io](https://streamlit.io).
+* Connect with GitHub repository.
+
+**8. Deploy the Application**
+
+* Select the repo & branch.
+* Choose the main file (`app.py`).
+* Set Python version & requirements.txt.
+
+**9. Configure Secrets (if needed)**
+
+* Add API keys or environment variables securely in Streamlit Cloud → Settings → Secrets.
+
+**10. Verify Online Deployment**
+
+* Open the hosted link provided by Streamlit Cloud.
+* Test on multiple devices (mobile, tablet, desktop).
+
+**11. Maintain & Update**
+
+* Update code in GitHub → Auto redeploys on Streamlit Cloud.
+* Monitor logs for errors & fix issues.
 
 ---
 
+---
+
+### **12. Deployment**
+
+#### **Local Deployment**
+
+The project can be run locally on any machine with Python installed. This is useful for contributors who want to test and experiment with scraping, translation, and the UI in real-time.
+
+**Steps for Local Deployment:**
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/username/swaraj.git
+   cd swaraj
+   ```
+
+2. **Set Up Virtual Environment (Recommended)**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate     # For Linux/Mac
+   venv\Scripts\activate        # For Windows
+   ```
+
+3. **Install Dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Application**
+
+   ```bash
+   streamlit run app.py
+   ```
+
+   * The application will start a local server.
+   * Open the provided link (default: `http://localhost:8501`) in your browser.
+
+This setup allows contributors to work on **scraping pipelines, translation logic, or UI changes** instantly and test them in their own environment.
 
 ---
+
+#### **Streamlit Cloud Deployment**
+
+The project is also deployed on **Streamlit Cloud** for accessibility, collaboration, and easy sharing. Streamlit Cloud automatically takes care of hosting, building, and deploying the app.
+
+**Steps for Streamlit Cloud Deployment:**
+
+1. **Push Code to GitHub**
+
+   * Ensure that the latest code is committed and pushed to the repository (main branch or deployment branch).
+   * Example:
+
+     ```bash
+     git add .
+     git commit -m "Update: Added translation improvements"
+     git push origin main
+     ```
+
+2. **Link Repository to Streamlit Cloud**
+
+   * Go to [Streamlit Cloud](https://streamlit.io/cloud).
+   * Create a new app and link it to your GitHub repository.
+
+3. **Configure Deployment Settings**
+
+   * Select the correct branch (`main` or your chosen branch).
+   * Set the **Main file path** (usually `app.py`).
+   * Add required **secrets** (API keys, credentials, etc.) in the Streamlit Cloud dashboard under **Secrets Management**.
+
+4. **Automatic Deployment**
+
+   * Every time a new commit is pushed to GitHub, Streamlit Cloud automatically rebuilds and redeploys the app.
+   * No manual restart is needed.
+
+5. **Accessing the App**
+
+   * A live URL will be generated (e.g., `https://swaraj.streamlit.app`).
+   * Share this link with collaborators, testers, or users.
+
+---
+## 13 Future Work
+
+* Add support for more Indian regional languages.
+* Implement advanced NLP features (summarization, sentiment analysis).
+* Optimize scraping speed with asynchronous pipelines.
+* Improve UI/UX for better accessibility.
+* Enable offline translation support.
+* Build APIs to integrate with government websites and mobile apps.
+
+
+
 
 
