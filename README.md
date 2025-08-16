@@ -181,24 +181,9 @@ During Sprint 1-2, several **improvements were made**:
   ```
 
 ---
-
-## **9. Deployment Guide**
-
-### **Local Deployment**
-
-1. Ensure Python 3.11+, virtual environment, and dependencies installed.
-2. Run the app:
-
-   ```bash
-   streamlit run app.py
-   ```
-3. Access locally at `http://localhost:8501`.
-
 ---
 
----
-
-## **10. Challenges Faced**
+## **9. Challenges Faced**
 
 * Handling **dynamic content** on government portals (ads, inconsistent HTML).
 * Chunking large texts for translation to avoid API errors.
@@ -209,7 +194,7 @@ During Sprint 1-2, several **improvements were made**:
 ---
 ---
 
-## 11. Streamlit Deployment Steps
+## 10. Streamlit Deployment Steps
 
 **1. Install Dependencies**
 
@@ -294,7 +279,7 @@ During Sprint 1-2, several **improvements were made**:
 
 ---
 
-### **12. Deployment**
+### **11. Deployment of Project**
 
 #### **Local Deployment**
 
@@ -375,7 +360,7 @@ The project is also deployed on **Streamlit Cloud** for accessibility, collabora
    * Share this link with collaborators, testers, or users.
 
 ---
-## 13 Future Work
+## 12 Future Work
 
 * Add support for more Indian regional languages.
 * Implement advanced NLP features (summarization, sentiment analysis).
