@@ -1,3 +1,4 @@
+<img width="755" height="130" alt="image" src="https://github.com/user-attachments/assets/1f78794f-3931-40ed-9154-86203c77683e" />
 ---
 
 # Swarjya
