@@ -1,5 +1,4 @@
 ---
-
 # Swarjya
 
 Swarjya is an open-source application developed during the **Swecha SOAI 2025 – Open Source AI Powered Apps Internship**.
