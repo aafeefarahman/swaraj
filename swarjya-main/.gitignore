@@ -1,0 +1,22 @@
+# Python virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.swp
+
+# OS files
+.DS_Store
+
+# Secrets / env
+secrets
+.env
+
+# Package info
+*.egg-info/
+
+# Streamlit app folder
+streamlit-app/

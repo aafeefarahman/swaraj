@@ -1,0 +1,24 @@
+requests
+streamlit
+beautifulsoup4
+transformers
+torch
+sentencepiece
+numpy
+pandas
+pyttsx3
+gTTS
+SpeechRecognition
+whisper
+vosk
+sounddevice
+uv   # uv package manager
+ deep-translator
+ firebase-admin
+ streamlit-lottie
+ scikit-learn
+ selenium
+ webdriver-manager
+langdetect
+textblob
+pyspellchecker

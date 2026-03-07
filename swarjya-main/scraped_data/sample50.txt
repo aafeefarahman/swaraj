@@ -1,0 +1,49 @@
+URL: https://www.w3schools.com/html/
+Title: HTML Tutorial
+
+HTML is the standard markup language for Web pages.
+
+With HTML you can create your own Website.
+
+HTML is easy to learn - You will enjoy it!
+
+Study our HTML Tutorial for free,no registration needed.
+
+Upgrade your learning with ourinteractive HTML Course 
+        and Get Certified.
+
+Tip:Sign into track your progress - it's free.
+
+With our "Try it Yourself" editor, you can edit the HTML code and view the 
+result in the browser:
+
+Click on the "Try it Yourself" button to see how it works.
+
+This tutorial supplements all explanations with clarifying examples.
+
+See all HTML Examples
+
+Many chapters in this tutorial end with an exercise where you can check your level of knowledge.
+
+What is a correct syntax for an HTML hyperlink?
+
+See all HTML Exercises
+
+Test your HTML skills with our HTML Quiz!
+
+Start HTML Quiz!
+
+Sign Up for Free
+
+Note:This is an optional feature. You can study at W3Schools without creating an account.
+
+At W3Schools you will find complete references about HTML elements, 
+attributes, events, color names, entities, character-sets, URL encoding, 
+language codes, HTTP messages, browser support, and more:
+
+Get certified by completingtheHTMLcourse
+
+If you want to use W3Schools services as an educational institution, team or enterprise, send us an e-mail:sales@w3schools.com
+
+If you want to report an error, or if you want to make a suggestion, send us an e-mail:help@w3schools.com
+
