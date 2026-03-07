@@ -6,7 +6,31 @@ Swarjya is an open-source application developed during the **Swecha SOAI 2025 �
 The project aims to make government portal information easier to understand by translating complex English content into **regional Indian languages**.
 
 The system also supports **Text-to-Speech (TTS)** so users can listen to translated content. In addition, the project collects translation pairs that can help build **Indic language datasets for NLP research**.
+# Swarjya
 
+## 🌐 Live Application
+Try the deployed application here:
+
+🔗 https://swarajya-hub.shyamcheni.workers.dev/
+
+---
+
+## 📸 Application Preview
+
+<img width="941" height="397" alt="image" src="https://github.com/user-attachments/assets/da742546-f67a-4cf7-ab9c-d1147c3392a4" />
+
+
+The application provides multiple AI-powered tools including:
+
+- 🌍 Webpage Translator
+- 📝 Basic Language Translator
+- 🕷️ Web Scraper
+- 📚 Corpus Collector
+- 🧹 Data Cleaning
+- 🏷️ Label Data
+- 🔤 Tokenizing
+- 🔡 Normalizing
+- 🔢 Vectorizing
 ---
 
 # 1. Project Overview
