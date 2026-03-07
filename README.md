@@ -1,375 +1,240 @@
+---
+
+# Swarjya
+
+Swarjya is an open-source application developed during the **Swecha SOAI 2025 – Open Source AI Powered Apps Internship**.
+The project aims to make government portal information easier to understand by translating complex English content into **regional Indian languages**.
+
+The system also supports **Text-to-Speech (TTS)** so users can listen to translated content. In addition, the project collects translation pairs that can help build **Indic language datasets for NLP research**.
 
 ---
 
-# Swaraj: AI-Powered Government Portal Translator
-**Bridging Bharat with Bharosa: Making Government Information Truly Accessible**
+# 1. Project Overview
+
+Many government websites publish important information in formal English, which can be difficult for many citizens to understand.
+
+Swarjya helps address this issue by:
+
+* Extracting readable content from government portal webpages
+* Translating the content into local Indian languages
+* Providing audio output using Text-to-Speech
+* Collecting original and translated text pairs for dataset creation
+
+This helps improve **information accessibility and language inclusivity**.
 
 ---
 
-## **1. Project Overview / Abstract**
+# 2. Problem Statement
 
-Swaraj is an **AI-powered Streamlit web application** designed to make official government content accessible in **regional Indian languages** like Hindi, Urdu, and Telugu.
+Government portals often contain important information related to schemes, policies, and public services. However, the use of complex English can create barriers for many people.
 
-It **bridges the language divide** by translating formal English text from government portals, while also providing **voice accessibility** and **readable content**, ensuring governance is truly inclusive.
+Some challenges include:
 
----
+* Limited awareness of government schemes
+* Difficulty understanding official information
+* Dependence on intermediaries for explanations
 
-## **2. Motivation / Purpose**
-
-* **Inclusivity:** Millions of Indians rely on regional languages to access information.
-* **Accessibility:** Complex English and formal website structures make it hard for non-English speakers.
-* **Empowerment:** By simplifying government content, citizens can better **understand policies, exercise rights, and access services**.
-
-> Swaraj is designed not only to translate text but also to **speak and listen**, making government portals interactive for all citizens.
+Swarjya aims to bridge this gap using **AI-powered translation and speech technologies**.
 
 ---
 
-## **3. Key Features**
+# 3. Key Features
 
-* 🗂️ **Scraping Engine:** Extracts structured content (paragraphs, headings) from government websites.
-* 🌐 **Translation Module:** Converts scraped text to Hindi, Urdu, Telugu.
-* 🗣️ **Text-to-Speech (TTS):** Reads translations aloud.
-* 🎤 **Speech-to-Text (STT):** Accepts user voice input for queries.
-* 💾 **Corpus Creation:** Builds datasets for AI research and fine-tuning.
-* 🖥️ **Minimal UI:** Clean, simple Streamlit interface.
-* 🧪 **Rapid Testing:** Quick prototyping and deployment.
+• **URL Input**
+
+* Users can paste a government portal link.
+
+• **Web Scraping**
+
+* Extracts readable text from webpages.
+
+• **AI Translation**
+
+* Translates English content into Indian languages.
+
+Supported languages:
+
+* Telugu
+* Hindi
+* Bengali
+* Tamil
+* Malayalam
+* Gujarati
+
+• **Text-to-Speech**
+
+* Converts translated text into speech for better accessibility.
+
+• **Corpus Collection**
+
+* Stores translation pairs that can be used to build datasets for NLP research.
 
 ---
 
-## **4. Tech Stack**
+# 4. Technology Stack
 
-* **Backend:** Python (NLP, translation, TTS/STT)
-* **Frontend:** Streamlit
-* **Libraries:** BeautifulSoup, requests, pandas, transformers, langdetect, nltk, gTTS, SpeechRecognition
-* **Database:** SQLite / Firebase
-* **Deployment:** Local environment & Streamlit Cloud
+• **Frontend**
+
+* Streamlit
+
+• **Backend**
+
+* Python
+
+• **Libraries**
+
+* Requests
+* BeautifulSoup
+
+• **Translation Engine**
+
+* AI4Bharat IndicTrans2 API
+
+• **Text-to-Speech**
+
+* pyttsx3
+* gTTS
+
+• **Data Storage**
+
+* CSV files for corpus collection
+
+• **Version Control**
+
+* Git
 
 ---
 
-## **5. Team Roles**
+# 5. Project Architecture
 
-| Member           | Role                                        | Responsibility                                                       |
-| ---------------- | ------------------------------------------- | -------------------------------------------------------------------- |
-| Sai Mohan & Uday | Web Scraping Engineers                      | Build scraping scripts and source data from government portals       |
-| Shyam Cheni      | Translation, TTS/STT, Frontend, Coordinator | Leads app integration, voice module, and UI design                   |
-| Deepthi & Bindu  | Corpus & Dataset Managers                   | Curate multilingual datasets for training/testing translation models |
-| Afeefa           | Documentation & DevOps                      | Maintains project structure, writes docs, deployment testing         |
+The application works through the following steps:
+
+1. **User Interface**
+
+   * User enters a government portal URL.
+   * Selects the target language.
+
+2. **Web Scraping Module**
+
+   * Fetches webpage HTML.
+   * Extracts readable content.
+
+3. **Translation Module**
+
+   * Sends text to the translation API.
+   * Receives translated output.
+
+4. **Text-to-Speech Module**
+
+   * Converts translated text into audio.
+
+5. **Corpus Logger**
+
+   * Saves both source and translated text pairs for dataset building.
 
 ---
 
-## **6. Installation & Setup**
+# 6. Installation and Setup
 
-### **Step 1 — Install Python 3.11+**
+1️⃣ Clone the repository
 
 ```bash
-python --version
-# If not installed:
-# Windows / Mac: download from https://www.python.org/downloads/
-# Linux:
-sudo apt update
-sudo apt install python3.11 python3.11-venv python3.11-pip
-```
-
----
-
-### **Step 2 — Clone Repository**
-
-```bash
-git clone https://github.com/your-username/swaraj.git
+git clone https://github.com/aafeefarahman/swaraj.git
 cd swaraj
 ```
 
----
-
-### **Step 3 — Create Virtual Environment**
+2️⃣ Create a virtual environment
 
 ```bash
-python -m venv venv
-source venv/bin/activate    # Linux / Mac
-venv\Scripts\activate       # Windows
+python -m venv .venv
 ```
 
----
+3️⃣ Activate the environment
 
-### **Step 4 — Install Dependencies**
+Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+Linux / Mac
+
+```bash
+source .venv/bin/activate
+```
+
+4️⃣ Install dependencies
 
 ```bash
 pip install -r requirements.txt
-# If missing:
-pip install streamlit googletrans==4.0.0rc1 gTTS SpeechRecognition pandas requests beautifulsoup4
 ```
 
----
-
-### **Step 5 — Run Streamlit App**
+5️⃣ Run the application
 
 ```bash
-streamlit run app.py
+streamlit run pages/welcome.py
 ```
 
 ---
 
-## **7. Data Pipeline Documentation**
-<img width="1352" height="1429" alt="image" src="https://github.com/user-attachments/assets/83695fb0-8d2a-4e11-a062-d9d2921b0172" />
-Swaraj’s data flow is designed for **clarity, reusability, and robustness**:
+# 7. Dataset Contribution
 
-1. **User Input:** Paste government portal URL in Streamlit.
-2. **Web Scraping:**
+A small dataset of government-related English sentences translated into **Telugu and Hindi** has been included.
 
-   * `scraper.py` extracts **paragraphs, headings**, removes ads/footers.
-   * Output stored in JSON:
+Dataset location:
 
-     ```json
-     {
-       "url": "https://...",
-       "title": "Page Title",
-       "content": "Clean paragraph content here"
-     }
-     ```
-   * Sample command:
+```
+corpus/dataset_v1.csv
+corpus/corpus.json
+```
 
-     ```bash
-     python scraper.py --url "https://www.india.gov.in"
-     ```
-3. **Translation Module:** Converts text to selected language using `translator.py`.
+Purpose:
 
-   * Sample command:
-
-     ```bash
-     python translator.py --input data/sample.json --lang hi
-     ```
-4. **TTS/STT:**
-
-   * Speak translations:
-
-     ```bash
-     python tts.py --text "Namaste" --lang hi
-     ```
-   * Voice input captured via STT module for queries.
-5. **Corpus Storage:**
-
-   * Original + translated text saved in `/data` folder and DB:
-
-     ```bash
-     sqlite3 swaraj.db
-     ```
-6. **Display:** Clean text displayed in Streamlit UI.
-
----
-
-## **8. Pipeline Refinements & Optimizations**
-
-During Sprint 1-2, several **improvements were made**:
-
-* **Scraper Optimization:**
-
-  * Removed unnecessary HTML tags (ads, headers, footers).
-  * Handled **timeouts** and **invalid URLs** gracefully.
-  * Chunked long text into smaller segments for smooth translation.
-* **Translation Improvements:**
-
-  * Verified accuracy for Hindi, Urdu, Telugu manually.
-  * Stored translations in structured CSV:
-
-    ```csv
-    title,english,hindi,urdu,telugu
-    ```
-* **Corpus Export Script:** Automated conversion of DB entries to text files for AI training.
-
-  ```bash
-  python export_corpus.py --output data/corpus_v1.txt
-  ```
+* Provide sample translation pairs
+* Support creation of Indic language NLP datasets
+* Help future fine-tuning of translation models
 
 ---
 ---
 
-## **9. Challenges Faced**
+## 8. Project Structure
 
-* Handling **dynamic content** on government portals (ads, inconsistent HTML).
-* Chunking large texts for translation to avoid API errors.
-* Ensuring **voice modules** worked offline (pyttsx3) and online (gTTS).
-* Testing **local deployment reproducibility** across machines.
-* Installing streamlit & learning it.
+This helps people quickly understand the repo layout.
 
----
----
+Example:
 
-## 10. Streamlit Deployment Steps
+```
+swaraj/
+│
+├── pages/                # Streamlit UI pages
+├── corpus/               # Dataset and translation corpus
+├── scraped_data/         # Scraped website content
+├── translator-proxy/     # Translation service integration
+├── utils/                # Helper scripts
+├── extension/            # Browser extension related files
+├── Document/             # Project documentation
+├── requirements.txt      # Project dependencies
+└── README.md             # Project overview
+```
 
-**1. Install Dependencies**
 
-* Make sure Python (≥3.9) is installed.
-* Install project requirements:
-
-  ```bash
-  pip install -r requirements.txt
-  ```
-
-**2. Set Up Virtual Environment** *(Optional but recommended)*
-
-* Create environment:
-
-  ```bash
-  python -m venv venv
-  ```
-* Activate it:
-
-  * Windows: `venv\Scripts\activate`
-  * Linux/Mac: `source venv/bin/activate`
-
-**3. Organize Project Files**
-
-* Keep files in a structured format:
-
-  ```
-  /swaraj
-    ├── app.py              # Main Streamlit app
-    ├── scraper/            # Scraping scripts
-    ├── translation/        # Translation pipeline
-    ├── data/               # Datasets or cache
-    ├── requirements.txt    # Dependencies
-    └── README.md
-  ```
-
-**4. Run Locally**
-
-* Launch app with:
-
-  ```bash
-  streamlit run app.py
-  ```
-* Open browser at `http://localhost:8501`.
-
-**5. Test Functionality**
-
-* Verify scraping → translation → display works.
-* Check UI, buttons, and language output.
-
-**6. Configure GitHub Repository**
-
-* Push code to GitHub repo for deployment.
-* Include `.gitignore` to skip cache & venv.
-
-**7. Setup Streamlit Cloud Account**
-
-* Sign in at [streamlit.io](https://streamlit.io).
-* Connect with GitHub repository.
-
-**8. Deploy the Application**
-
-* Select the repo & branch.
-* Choose the main file (`app.py`).
-* Set Python version & requirements.txt.
-
-**9. Configure Secrets (if needed)**
-
-* Add API keys or environment variables securely in Streamlit Cloud → Settings → Secrets.
-
-**10. Verify Online Deployment**
-
-* Open the hosted link provided by Streamlit Cloud.
-* Test on multiple devices (mobile, tablet, desktop).
-
-**11. Maintain & Update**
-
-* Update code in GitHub → Auto redeploys on Streamlit Cloud.
-* Monitor logs for errors & fix issues.
+## 9. Use Cases / Applications
+* Making government schemes easier to understand
+* Helping rural users access official information
+* Supporting multilingual digital governance
+* Building datasets for Indic NLP research
+* Improving accessibility through speech support
 
 ---
 
----
 
-### **11. Deployment of Project**
-
-#### **Local Deployment**
-
-The project can be run locally on any machine with Python installed. This is useful for contributors who want to test and experiment with scraping, translation, and the UI in real-time.
-
-**Steps for Local Deployment:**
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/username/swaraj.git
-   cd swaraj
-   ```
-
-2. **Set Up Virtual Environment (Recommended)**
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate     # For Linux/Mac
-   venv\Scripts\activate        # For Windows
-   ```
-
-3. **Install Dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the Application**
-
-   ```bash
-   streamlit run app.py
-   ```
-
-   * The application will start a local server.
-   * Open the provided link (default: `http://localhost:8501`) in your browser.
-
-This setup allows contributors to work on **scraping pipelines, translation logic, or UI changes** instantly and test them in their own environment.
+## 10. Future Improvements
+* Support more Indian languages
+* Improve translation accuracy
+* Add offline translation support
+* Improve UI and accessibility features
+* Expand the dataset for better NLP training
 
 ---
-
-#### **Streamlit Cloud Deployment**
-
-The project is also deployed on **Streamlit Cloud** for accessibility, collaboration, and easy sharing. Streamlit Cloud automatically takes care of hosting, building, and deploying the app.
-
-**Steps for Streamlit Cloud Deployment:**
-
-1. **Push Code to GitHub**
-
-   * Ensure that the latest code is committed and pushed to the repository (main branch or deployment branch).
-   * Example:
-
-     ```bash
-     git add .
-     git commit -m "Update: Added translation improvements"
-     git push origin main
-     ```
-
-2. **Link Repository to Streamlit Cloud**
-
-   * Go to [Streamlit Cloud](https://streamlit.io/cloud).
-   * Create a new app and link it to your GitHub repository.
-
-3. **Configure Deployment Settings**
-
-   * Select the correct branch (`main` or your chosen branch).
-   * Set the **Main file path** (usually `app.py`).
-   * Add required **secrets** (API keys, credentials, etc.) in the Streamlit Cloud dashboard under **Secrets Management**.
-
-4. **Automatic Deployment**
-
-   * Every time a new commit is pushed to GitHub, Streamlit Cloud automatically rebuilds and redeploys the app.
-   * No manual restart is needed.
-
-5. **Accessing the App**
-
-   * A live URL will be generated (e.g., `https://swaraj.streamlit.app`).
-   * Share this link with collaborators, testers, or users.
-
----
-## 12 Future Work
-
-* Add support for more Indian regional languages.
-* Implement advanced NLP features (summarization, sentiment analysis).
-* Optimize scraping speed with asynchronous pipelines.
-* Improve UI/UX for better accessibility.
-* Enable offline translation support.
-* Build APIs to integrate with government websites and mobile apps.
-
-
-
 
 
